@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
+<head><link rel="manifest" href="manifest.json">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -148,7 +148,7 @@
     <div class="hero-header" onclick="triggerAdminLogin()">
         <button class="theme-toggle-btn" onclick="event.stopPropagation(); toggleTheme();">🌙 الوضع</button>
         <h1>مدرسة الهندية الابتدائية للبنين</h1>
-        <p>بوابة المعرفة والإبداع • كربلاء المقدسة[span_0](start_span)[span_0](end_span)</p>
+        <p>بوابة المعرفة والإبداع • كربلاء المقدسة</p>
     </div>
 
 <div class="container">
@@ -158,8 +158,8 @@
         
         <!-- أوقات الدوام الرسمي -->
         <div class="card">
-            <h3 style="text-align:center; color:#2563eb;">⏰ أوقات الدوام الرسمي والاتصال[span_1](start_span)[span_1](end_span)</h3>
-            <p style="text-align: center;">معلومات الدوام الرسمي، أوقات الانصراف، ومواعيد مراجعة أولياء الأمور[span_2](start_span)[span_2](end_span).</p>
+            <h3 style="text-align:center; color:#2563eb;">⏰ أوقات الدوام الرسمي والاتصال</h3>
+            <p style="text-align: center;">معلومات الدوام الرسمي، أوقات الانصراف، ومواعيد مراجعة أولياء الأمور.</p>
             <button class="btn btn-primary" onclick="toggleTime()" style="margin-bottom: 15px;" id="timeBtn">عرض التفاصيل</button>
             
             <div id="timeBox" style="display: none; border-top: 1px solid var(--border-color); padding-top: 12px;">
@@ -174,14 +174,14 @@
 
         <!-- الجداول الدراسية -->
         <div class="card">
-            <h3 style="text-align:center; color:#2563eb;">📅 الجداول الدراسية (أيام الأسبوع)[span_3](start_span)[span_3](end_span)</h3>
-            <p style="text-align: center;">اضغط على أي يوم من أيام الأسبوع لاستعراض جدول الحصص[span_4](start_span)[span_4](end_span):</p>
+            <h3 style="text-align:center; color:#2563eb;">📅 الجداول الدراسية (أيام الأسبوع)</h3>
+            <p style="text-align: center;">اضغط على أي يوم من أيام الأسبوع لاستعراض جدول الحصص:</p>
             
             <div class="days-grid">
-                <button class="day-btn" onclick="openSchedule('sunday')">الأحد[span_5](start_span)[span_5](end_span)</button>
-                <button class="day-btn" onclick="openSchedule('monday')">الإثنين[span_6](start_span)[span_6](end_span)</button>
-                <button class="day-btn" onclick="openSchedule('tuesday')">الثلاثاء[span_7](start_span)[span_7](end_span)</button>
-                <button class="day-btn" onclick="openSchedule('wednesday')">الأربعاء[span_8](start_span)[span_8](end_span)</button>
+                <button class="day-btn" onclick="openSchedule('sunday')">الأحد</button>
+                <button class="day-btn" onclick="openSchedule('monday')">الإثنين</button>
+                <button class="day-btn" onclick="openSchedule('tuesday')">الثلاثاء</button>
+                <button class="day-btn" onclick="openSchedule('wednesday')">الأربعاء</button>
                 <button class="day-btn full-width" onclick="openSchedule('thursday')">الخميس</button>
             </div>
         </div>
@@ -219,13 +219,13 @@
         </div>
     </div>
 
-    <!-- تسجيل دخول الإدارة (بدون نص إرشادي لرمز المرور) -->
+    <!-- تسجيل دخول الإدارة -->
     <div id="loginView" class="section">
         <div class="card">
-            <h2>تسجيل دخول الإدارة[span_9](start_span)[span_9](end_span)</h2>
+            <h2>تسجيل دخول الإدارة</h2>
             <input type="password" id="adminCode" placeholder="أدخل رمز المرور...">
-            <button class="btn btn-primary" onclick="checkLogin()">دخول[span_10](start_span)[span_10](end_span)</button>
-            <button class="btn btn-danger" onclick="switchSection('userView')" style="margin-top: 10px; background-color: #475569;">رجوع للرئيسية[span_11](start_span)[span_11](end_span)</button>
+            <button class="btn btn-primary" onclick="checkLogin()">دخول</button>
+            <button class="btn btn-danger" onclick="switchSection('userView')" style="margin-top: 10px; background-color: #475569;">رجوع للرئيسية</button>
             <div id="loginAlert" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 10px; border-radius: 8px; margin-top: 10px; display: none; text-align: center; font-size: 13px;">الرمز غير صحيح!</div>
         </div>
     </div>
@@ -233,8 +233,8 @@
     <!-- لوحة التحكم الإدارية الكاملة -->
     <div id="adminView" class="section">
         <div class="card">
-            <h2>لوحة التحكم الإدارية[span_12](start_span)[span_12](end_span)</h2>
-            <p>مرحباً بك يا مدير المدرسة[span_13](start_span)[span_13](end_span).</p>
+            <h2>لوحة التحكم الإدارية</h2>
+            <p>مرحباً بك يا مدير المدرسة.</p>
             
             <h3 style="margin-top: 15px;">تعديل أوقات الدوام الرسمي:</h3>
             <textarea id="adminNewTime" rows="3">الطابور 7:30 صباحاً.
@@ -245,7 +245,6 @@
             <input type="text" id="nTitle" placeholder="عنوان التبليغ (مثلاً: عطلة رسمية)...">
             <textarea id="nBody" placeholder="نص التبليغ..." rows="3"></textarea>
             
-            <!-- تم إرجاع اختيار ملف من الجهاز هنا -->
             <label style="font-size: 12px; color: var(--text-secondary); display: block; margin-bottom: 4px;">إرفاق صورة (اختياري):</label>
             <input type="file" id="nImageFile" accept="image/*" style="padding: 8px;">
             
@@ -257,7 +256,7 @@
             <div id="complaintsListContainer">
                 <p style="text-align: center; color: var(--text-secondary);">لا توجد شكاوى واردة حالياً.</p>
             </div>
-            <button class="btn btn-danger" onclick="switchSection('userView')" style="margin-top: 20px; background-color: #ef4444;">العودة للواجهة الرئيسية[span_14](start_span)[span_14](end_span)</button>
+            <button class="btn btn-danger" onclick="switchSection('userView')" style="margin-top: 20px; background-color: #ef4444;">العودة للواجهة الرئيسية</button>
         </div>
     </div>
 
